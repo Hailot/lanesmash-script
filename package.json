@@ -8,7 +8,15 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "consolidate": "^0.16.0",
     "core-js": "^3.6.5",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "sequelize": "^6.3.5",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.1",
+    "sqlite3": "^5.0.0",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
@@ -22,6 +30,8 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "sequelize-cli": "^6.2.0",
+    "nodemon": "^2.0.4"
   }
 }
