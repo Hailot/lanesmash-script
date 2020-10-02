@@ -1,6 +1,6 @@
 # lanesmash-script
 
-The script is split in to two parts, a nodejs/exoress server and Vuejs Frontend
+The script is split in to two parts, a nodejs/express server and Vuejs Frontend
 both things must be running for the script to work
 
 ## Project setup
