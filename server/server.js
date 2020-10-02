@@ -95,6 +95,15 @@ app.get('/api/teams', (req, res) => {
     })
   });
 
+app.get('/api/lane', (req, res) => {
+    return db.Lane.findAll()
+        .then((lanes) => res.send(lanes))
+        .catch((err) => {
+            console.log('There was an error querying contacts', JSON.stringify(err))
+            return res.send(err)
+        })
+});
+
 app.listen(`${port}`, function() {
   console.log(`Server started on port ${port}`);
 });

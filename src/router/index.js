@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Admin from "@/views/Admin";
+import Teams from "@/views/Teams";
+import Overlay from "@/views/Overlay";
 
 Vue.use(VueRouter)
 
@@ -9,6 +12,21 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/admin',
+    name: 'Admin',
+    component: Admin
+  },
+  {
+    path: '/teams',
+    name: 'Teams',
+    component: Teams
+  },
+  {
+    path: '/overlay',
+    name: 'Overlay',
+    component: Overlay
   },
   {
     path: '/about',

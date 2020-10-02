@@ -5,7 +5,7 @@ const match = require('./match.js');
 var subAttempt = 0;
 var unsubAttempt = 0;
 
-let ws = new WebSocket('wss://push.planetside2.com/streaming?environment=ps2&service-id=s:' + "pil");
+let ws = new WebSocket('wss://push.planetside2.com/streaming?environment=ps2&service-id=s:' + "PlanetsideBattles");
 
 ws.on('open', function open() {
   subAttempt += 1;
@@ -22,7 +22,7 @@ ws.on('close', function (data) {
   console.log('Stream closed...');
   console.log(data);
   ws.close();
-  ws = new WebSocket('wss://push.planetside2.com/streaming?environment=ps2&service-id=s:' + "pil");
+  ws = new WebSocket('wss://push.planetside2.com/streaming?environment=ps2&service-id=s:' + "PlanetsideBattles");
 });
 
 const allXpIdsRevives = [
@@ -55,7 +55,7 @@ function getExperienceIds(revives) {
 function subscribe(ws) {
   var xpGainString = getExperienceIds(true);
 
-  server_id = match.getServer();
+  var server_id = 19;
   ws.send('{"service":"event","action":"subscribe","characters":["all"],"eventNames":["Death", "VehicleDestroy"],"worlds":["' + server_id +'"],"logicalAndCharactersWithWorlds":true}')
   ws.send('{"service":"event","action":"subscribe","characters":["all"],"eventNames":[' + xpGainString + '],"worlds":["' + server_id +'"],"logicalAndCharactersWithWorlds":true}')
 
