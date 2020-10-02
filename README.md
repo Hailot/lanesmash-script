@@ -12,9 +12,12 @@ npm install
 cd ./server && sequelize db:migrate && sequelize db:seed:all
 ```
 
-### Compiles and hot-reloads for development
+### Open 2 terminal windows from the project root folder
 ```
-nodemon server/server.js && npm run serve
+nodemon server/server.js 
+```
+```
+npm run serve
 ```
 
 ### Compiles and minifies for production
